@@ -1,21 +1,13 @@
 
 def administrar_chatbot(text):
-    global tutor
-    global sesion_number
-    global selected_option_details
-    global selected_option_details_tutor
-    global numero_opcion
     text = text.lower() #mensaje usuario
-    list = []
     print("texto:",text)
-
     if "hola" in text:
         body = "Hola bienvenido a tutoria UC"
         footer='elige una de las siguienstes opciones'
         options=["Acceder cuenta", "FAQ","Dejar tu Opinión"]
         # list.append(replyReaction)
         # list.append(replyButtonData)
-
     elif "acceder cuenta" in text:
         body = "Tienes cuenta Wenet?"
         footer='Elegi la opcion correcta'
@@ -31,15 +23,14 @@ def administrar_chatbot(text):
         # replyReaction = replyReaction_Message(number, messageId, "😀")
         # list.append(replyReaction)
         # list.append(textMessage)
-
     elif "no tengo cuenta" in text:
         pass
         # textMessage = text_Message(number, "Necesitas una cuenta de Wenet para acceder a los servicios de la tutoria, puede crear una cuenta en el siguiente link:\n\n www.wenet.com/crearcuenta")
         # replyReaction = replyReaction_Message(number, messageId, "😀")
         # list.append(replyReaction)
         # list.append(textMessage)
-
     elif "any(number in text for number in numbers)":
+        #Esto pasa cuando la persona elige si tengo cuenta
         pass
         # # Encuentra el número de teléfono correspondiente
         # matching_number = next((number for number in numbers if number in text), None)
