@@ -1,8 +1,10 @@
 
 def administrar_chatbot(text):
+    rol="alumno"
     text = text.lower() #mensaje usuario
     print("texto:",text)
     if "hola" in text:
+        rol="alumno"
         body = "Hola bienvenido a tutoria UC"
         footer='elige una de las siguienstes opciones'
         options=["Acceder cuenta", "FAQ","Dejar tu Opinión"]
@@ -338,6 +340,7 @@ def administrar_chatbot(text):
         # textMessage = text_Message(number, "Ok se le notificara al alumno que no deseaste ser tutor, que tengas un buen dia")
         # list.append(textMessage)
     elif "soy tutor" in text:
+        rol="tutor"
         pass
         # tutor = True
         # body = "porfavor selecione una opcion para continuar"
